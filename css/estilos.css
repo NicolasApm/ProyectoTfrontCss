@@ -1,0 +1,310 @@
+
+body h3{
+	text-align: center;
+	font-size: 2em;
+	font-family: helvetica;
+}
+body div{
+	text-align: center;
+	font-size: 1.1em;
+	font-family: helvetica;
+}
+.item{
+	font-size: 20px;
+}
+#Intro{
+	display:none;
+}
+.contenedor {
+	margin: 0 auto 20px auto;
+  width: 85%;
+	display: flex;
+	flex-flow: column wrap;
+}
+.contenedor .header {
+	width: 100%;
+	padding-bottom:50px;
+	height: 1px;
+	border: 0.5px black solid;
+	border-radius: 20px;
+	justify-content: left;
+	align-items: center;
+	margin: 0 auto 20px auto;
+}
+.contenedor .header{
+	display: flex;
+  flex-wrap: wrap;
+	width: 100%;
+}
+.item{
+	width: 100px;
+  height: auto;
+  margin-left: 40px;
+	/*background-color: cornflowerblue;*/
+}
+.contenedor .header span:first-child {
+  margin-right: 10%;
+	/*background-color: red;*/
+}
+
+/* General styling */
+nav {
+  background: rgba(100,100,100, 0.5);
+  margin: 5px;
+  padding: 10px;
+}
+.contenedor .bloque2{
+	background-image:url("https://elcosmonauta.es/wp-content/uploads/2017/07/podar-palmeras.jpg");
+ 	background-repeat: no-repeat;
+	border-radius: 25px;
+ 	background-size: 100% 100%;
+}
+
+.bloque2 {
+  min-height: 400px;
+	width: 100%;
+}
+.contenedor2 {
+	margin: 0 auto;
+  width: 85%;
+	display: flex;
+	flex-flow: row wrap;
+	}
+	.contenedor2 img{
+	width: 100%;
+	max-width: 100%;
+	min-width: 100%;
+	height: auto;
+	margin: 20px auto 20px auto;
+	border-radius: 20px;
+	}
+
+.bloque3 {
+  min-height: 50px;
+	width: 30%;
+}
+.bloque4 {
+	min-height: 50px;
+	width: 40%;
+}
+.bloque5 {
+	min-height: 50px;
+	width: 30%;
+}
+.bloque6 {
+  color: #333;
+	min-height: 50px;
+	width: 30%;
+}
+.bloque7 {
+  color: #333;
+	min-height: 50px;
+	width: 40%;
+}
+.bloque8 {
+  color: #ddd;
+	min-height: 50px;
+	width: 30%;
+}
+.bloque9 {
+  color: #333;
+	min-height: 50px;
+	width: 30%;
+}
+.bloque10 {
+  color: #333;
+	min-height: 50px;
+	width: 40%;
+}
+.bloque11 {
+  color: #ddd;
+	min-height: 50px;
+	width: 30%;
+}
+
+@media all and (max-width: 900px) and (min-width:700px) {
+	.contenedor{
+		width: 90%;
+	}
+	.contenedor .header{
+			text-align: center;
+			justify-content: left;
+			align-items: center;
+				}
+
+	.contenedor .header span:first-child {
+	 		width:100px;
+		background-color: red;
+	}
+	nav {
+	  background: rgba(100,100,100, 0.5);
+		text-align: center;
+		justify-content: left;
+		align-items: center;
+	}
+	.header {
+		width: 100%;
+		height: auto;
+	}
+	.bloque2 {
+		width: 100%;
+		height: auto;
+	}
+	.contenedor2{
+		width: 90%;
+	}
+	.bloque3 {
+		width: 0;
+		min-height: 50px;
+		display: none;
+	}
+	.bloque4{
+		width: 50%;
+		min-height: 50px;
+	}
+	.bloque5{
+		width: 50%;
+		min-height: 50px;
+	}
+	.bloque6 {
+		width: 0;
+		min-height: 50px;
+		display: none;
+	}
+	.bloque7{
+		width: 50%;
+		min-height: 50px;
+	}
+	.bloque8{
+		width: 50%;
+		min-height: 50px;
+	}
+	.bloque9{
+		width: 0;
+		display: none;
+	}
+	.bloque10{
+		width: 50%;
+		min-height: 50px;
+	}
+	.bloque11{
+		width: 50%;
+		min-height: 50px;
+	}
+}
+@media all and (max-width: 700px) and (min-width:480px) {
+	.contenedor{
+		width: 90%;
+	}
+	header{
+			text-align: center;
+	}
+
+	.bloque3, .bloque6, .bloque9 {
+		display: none;
+		width: 0;
+	}
+	.header {
+		width: 100%;
+		height: auto;
+	}
+	.bloque2 {
+		width: 100%;
+		min-height: 200px;
+
+	}
+	.contenedor2{
+		width: 90%;
+	}
+	.bloque3{
+		width: 100%;
+		min-height: 400px;
+		order: 2;
+	}
+
+	.bloque4 {
+		width: 100%;
+		min-height: 150px;
+	}
+	.bloque5{
+		width: 100%;
+		min-height: 150px;
+	}
+	.bloque7 {
+		width: 100%;
+		min-height: 150px;
+	}
+	.bloque8{
+		width: 100%;
+		min-height: 150px;
+	}
+	.bloque10 {
+		width: 100%;
+		min-height: 150px;
+	}
+	.bloque11{
+		width: 100%;
+		min-height: 150px;
+	}
+	#Intro{
+		display: inline !important;
+	}
+}
+@media all and (max-width: 480px) {
+	.contenedor{
+		width: 90%;
+		}
+		header{
+				text-align: center;
+		}
+
+	.bloque3, .bloque6, .bloque9 {
+		display: none;
+		width: 0;
+	}
+	.header {
+		width: 100%;
+		height: auto;
+	}
+	.bloque2 {
+		width: 100%;
+		min-height: 150px;
+
+	}
+	.contenedor2{
+		width: 90%;
+	}
+	.bloque3{
+		width: 100%;
+		min-height: 400px;
+		order: 2;
+	}
+
+	.bloque4 {
+		width: 100%;
+		min-height: 150px;
+	}
+	.bloque5{
+		width: 100%;
+		min-height: 150px;
+	}
+	.bloque7 {
+		width: 100%;
+		min-height: 150px;
+	}
+	.bloque8{
+		width: 100%;
+		min-height: 150px;
+	}
+	.bloque10 {
+		width: 100%;
+		min-height: 150px;
+	}
+	.bloque11{
+		width: 100%;
+		min-height: 150px;
+	}
+	#Intro{
+		display: inline !important;
+	}
+}
