@@ -4,54 +4,88 @@
   <head>
         <link rel="stylesheet" href="css/estilos.css">
         <meta charset="UTF-8">
+        <meta name="autor:" content="Nicolas">
+		    <meta name="keywords:" content="Servicio,Lugares,Playa,vacaciones,parque,rio">
+		    <meta name="description" content="Pagina de vacaciones">
       	<meta name="viewport" content="width=device-width, initial-scale=1.0">
       	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title>Demostracion LayoutShifter</title>
+  <title>Padina de vacaciones</title>
   </head>
   <body>
+    <nav id="navi" class="header">
+        <span class="item"><strong>Tu Campamento</strong></span>
+        <span class="item"><a href="#titulo1">Playa</a></span>
+        <span class="item"><a href="#titulo2">Parque</a></span>
+        <span class="item"><a href="#titulo3">Rios</a></span>
+    </nav>
     <div class="contenedor" role="main">
-      <nav class="header">
-          <span class="item"><strong>Header</strong></span>
-          <span class="item">Playa</span>
-          <span class="item">Parque</span>
-          <span class="item">Rios</span>
-  		</nav>
-      <div class="bloque2">
-        <!--<img src="image/inicial2.jpg" class="imgsPpal" alt="" >--->
-      </div>
+    <div class="bloque2">
+    </div>
     </div>
     <div class="contenedor2">
-      <div class="bloque3">
-        <img src="image/playa.jpg" alt="" >
+      <div class="bloqueimd1">
+        <img src="image/playa.jpg" class="imd">
       </div>
-      <div class="bloque4">
-      <h3>Playa</h3>
+      <div class="bloquecen1">
+      <h3 id="titulo1">Playa</h3>
         <p>Ve a la playa por una semana, te llevamos en bote a disintos lugares</p>
       </div>
-      <div class="bloque5">
-        <img src="image/bote.jpg" alt="" >
+      <div class="bloqueizq1">
+        <img src="image/bote.jpg" class="izq" alt="" >
       </div>
-      <div class="bloque6">
-        <img src="image/bote.jpg" alt="" >
+      <div class="bloqueimd2">
+        <img src="image/parque3.jpg" class="imd" alt="" >
       </div>
-      <div class="bloque7">
-      <h3>Parque</h3>
-        <p>paseos de un dia al parque y disfruta de la naturaleza</p>
+      <div class="bloquecen2">
+      <h3 id="titulo2">Parque</h3>
+        <p>Paseos de un dia al parque y disfruta de la naturaleza</p>
       </div>
-      <div class="bloque8">
-        <img src="image/bote.jpg" alt="" >
+      <div class="bloqueizq2">
+        <img src="image/parque4.jpg" class="izq" alt="" >
       </div>
-      <div class="bloque9">
-        <img src="image/bote.jpg" alt="" >
+      <div class="bloqueimd3">
+        <img src="image/rio.jpg" class="imd" alt="" >
       </div>
-      <div class="bloque10">
-      <h3>Río</h3>
+      <div class="bloquecen3">
+      <h3 id="titulo3">Río</h3>
       <p>Quédate en un campamento y disfruta del río</p>
       </div>
-      <div class="bloque11">
-        <img src="image/bote.jpg" alt="" >
+      <div class="bloqueizq3">
+        <img src="image/rio3.jpg" class="izq" alt="" >
       </div>
     </div>
   </body>
+  <footer class="contenedor3">
+    <div class="footer">
+      <p class="itemFooter">Dirección: Cll 72#14-52</p>
+      <p class="itemFooter">Bogotá-Colombia</p>
+      <p class="itemFooter">Código postal: 111111</p>
+      <p class="itemFooter">Telefono: 2111111</p>
+    </div>
+    <div class="Formulario">
+      <form  action="index.html" method="post">
+      <table class="Table">
+        <thead>
+          <tbody>
+            <tr>
+              <td>Contacto</td>
+            </tr>
+            <tr>
+              <td id="item1"><label for="email">Email: </label><br>
+		             <input type="email" name="email" placeholder="Ej: luis@gmail.com" autofocus required>
+              </td>
+            </tr>
+            <tr>
+              <td id="item2"><label for="comment">Descripcion: </label><br>
+		              <textarea name="comment" id="" cols="30" rows="3"></textarea></td>
+            </tr>
+            <tr>
+              <td id="item3"><p><input type="submit" value="Enviar"></p></td>
+            </tr>
+          </tbody>
+        </thead>
+      </table>
+    </form>
+      </div>
+  </footer>
 </html>

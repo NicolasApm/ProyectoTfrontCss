@@ -1,310 +1,389 @@
+/*variables para estilos*/
+:root {
+  --bg-color: #7CCCE5;
+	--font-color-white:#fff;
+	--heder-bg-color:#555E7B;
+	--header-bg-active:hsl(203, 7%, 66%);
+	--border-radius:20px;
+	--full-space:100%;
+	--contenedor2-bg-color:#FDE47F;
+	--contenedor2-active-item:#B2D968;
+	--contenedor2-odd-item:#F8F99A;
+	--contenedor3-bg-color:#555E7B;
+	--submit-bg-color:#FDE47F;
+}
+@import url('https://fonts.googleapis.com/css?family=Acme|Chilanka&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cinzel&display=swap');
 
-body h3{
+/*fondo de la pagina*/
+/*Cuerpo de la pagina estilos*/
+body div, footer{
 	text-align: center;
-	font-size: 2em;
-	font-family: helvetica;
+	font-size: 1.0em;
+/*	font-family: 'Acme', sans-serif;*/
+font-family: 'Chilanka', cursive;
 }
-body div{
-	text-align: center;
-	font-size: 1.1em;
-	font-family: helvetica;
+h3, nav{
+font-family: 'Cinzel', serif;
 }
+
+body{
+	background-color: var(--bg-color);
+}
+/*-----------------------------------------------------------*/
+/*Barra de navegacion: formato flex horizontal navegacion*/
+.header{
+	display: flex;
+	flex-flow: row wrap;
+	width: 85%;
+	border-radius: 20px;
+	padding: 2vh 0 2vh 0 ;
+	margin: 0 auto 2vh auto;
+}
+/*Barra de navegacion: color de fondo*/
+.header{background-color:var(--heder-bg-color);}
+/*Barra de navegacion: Formato para items dentro de barra de navegacion*/
 .item{
-	font-size: 20px;
+	width: 10vw;
+  height: auto;
+  margin-left: 3vh;
 }
-#Intro{
-	display:none;
+/*Barra de navegacion: Formato para primer elemento*/
+.header span:first-child {
+  margin-right: 20%;
+	margin-left:5%;
+	width: 30%;
+	color: var(--font-color-white);
+	font-size: 1.1em;
 }
+.header span:first-child:hover {
+ color: var(--bg-color);
+}
+
+/*Barra de navegacion: estilos para cuando se pasa el mause por un item */
+#navi span a:link, #navi span a:visited {
+	padding: 1.5vh 1.5vh;
+	text-decoration: none;
+	color: var(--font-color-white);
+	}
+#navi span a:hover, #navi span a:active{
+	background: var(--header-bg-active);
+	}
+/*--------------------------------------------------------------*/
+/*formato flex contenedor 1*/
 .contenedor {
-	margin: 0 auto 20px auto;
+	margin: 0 auto 2vh auto;
   width: 85%;
 	display: flex;
 	flex-flow: column wrap;
 }
-.contenedor .header {
-	width: 100%;
-	padding-bottom:50px;
-	height: 1px;
-	border: 0.5px black solid;
-	border-radius: 20px;
-	justify-content: left;
-	align-items: center;
-	margin: 0 auto 20px auto;
-}
-.contenedor .header{
-	display: flex;
-  flex-wrap: wrap;
+/*formato flex contenedor 1(Imagen de fondo) bloque de imagen*/
+.bloque2 {
+  min-height: 300px;
 	width: 100%;
 }
-.item{
-	width: 100px;
-  height: auto;
-  margin-left: 40px;
-	/*background-color: cornflowerblue;*/
-}
-.contenedor .header span:first-child {
-  margin-right: 10%;
-	/*background-color: red;*/
-}
-
-/* General styling */
-nav {
-  background: rgba(100,100,100, 0.5);
-  margin: 5px;
-  padding: 10px;
-}
+/*seleccion de imagen de fondo y formato de imagen*/
 .contenedor .bloque2{
 	background-image:url("https://elcosmonauta.es/wp-content/uploads/2017/07/podar-palmeras.jpg");
  	background-repeat: no-repeat;
-	border-radius: 25px;
- 	background-size: 100% 100%;
+	border-radius: var(--border-radius);
+ 	background-size: var(--full-space) var(--full-space);
 }
-
-.bloque2 {
-  min-height: 400px;
-	width: 100%;
-}
+/*formato flex contenedor 2(Contenido de la pagina)*/
 .contenedor2 {
 	margin: 0 auto;
   width: 85%;
 	display: flex;
 	flex-flow: row wrap;
+	border-radius: var(--border-radius);
 	}
-	.contenedor2 img{
-	width: 100%;
-	max-width: 100%;
-	min-width: 100%;
+	/*color de fondo del contenedor */
+	.contenedor2{
+	background-color: var(--contenedor2-bg-color);
+	}
+/*formato de imagenes del contenedor*/
+.contenedor2 img{
+	width: 80%;
 	height: auto;
-	margin: 20px auto 20px auto;
-	border-radius: 20px;
-	}
-
-.bloque3 {
-  min-height: 50px;
-	width: 30%;
+	border-radius: var(--border-radius);
+ 	margin: 2vw auto 2vw auto;
 }
-.bloque4 {
-	min-height: 50px;
+/*Efectos de animacion en imagenes*/
+img{
+	transition-property: width;
+	transition-duration: 0.5s;
+}
+img:hover{
+		width: 95%;
+}
+.contenedor2 div p{margin: auto 2vh auto 2vw}
+/*Textos de titulos bloque central del contenedor 2*/
+body h3{
+	text-align: center;
+	font-size: 2em;
+}
+body h3:hover{
+	color: var(--bg-color);
+}
+/*distribucion de 3 bloques en el contenedor principal*/
+div [class*="bloqueimd"]{
+		width: 30%;
+}
+div [class*="bloquecen"]{
+		width: 40%;
+}
+div [class*="bloqueizq"]{
+		width: 30%;
+}
+.contenedor2 > div:hover {
+	background : var(--contenedor2-active-item) !important;
+}
+.contenedor2 > div:nth-child(4),
+.contenedor2 > div:nth-child(5),
+.contenedor2 > div:nth-child(6){
+background : var(--contenedor2-odd-item);
+}
+/*---------------------Pie de pagia---------------------------------------------*/
+.contenedor3{
+	margin: 2vh auto auto auto;
+	width: 85%;
+	height: auto;
+	display: flex;
+	flex-flow: row wrap;
+	border-radius: var(--border-radius);
+}
+.contenedor3{background-color:var(--contenedor3-bg-color);}
+.contenedor3 .footer{
 	width: 40%;
+	margin-left: 40px;
+	text-align: center;
+	margin: auto;
 }
-.bloque5 {
-	min-height: 50px;
-	width: 30%;
+.contenedor3 .footer{
+	color: #fff;
 }
-.bloque6 {
-  color: #333;
-	min-height: 50px;
-	width: 30%;
+.contenedor3 .Formulario{
+	/*background-color: #FDE47F;*/
+	width: 45%;
+	max-width: 95%;
+	margin: 2vh 0 2vh 0;
+	border-radius: var(--border-radius);
 }
-.bloque7 {
-  color: #333;
-	min-height: 50px;
-	width: 40%;
+/*formato para tabla que contiene el formulario*/
+ table {
+	text-align: left;
+  width: 95%;
+	border-radius: var(--border-radius);
+	padding: 4vh;
 }
-.bloque8 {
-  color: #ddd;
-	min-height: 50px;
-	width: 30%;
+table{
+	background-color: #FDE47F;
 }
-.bloque9 {
-  color: #333;
-	min-height: 50px;
-	width: 30%;
+input[type=email] {
+   width : var(--full-space);
+  -webkit-appearance: none;
 }
-.bloque10 {
-  color: #333;
-	min-height: 50px;
-	width: 40%;
+input[type=submit] {
+  border-radius: 5px;
+  width : 35%;
+	padding: 1vh;
+	margin: auto; display: block;
+  -webkit-appearance: none;
+	font-size: 2vh;
+	font-weight: bold;
 }
-.bloque11 {
-  color: #ddd;
-	min-height: 50px;
-	width: 30%;
+input[type=submit]{
+	background:var(--submit-bg-color);
+	border: 1px solid #999;
 }
-
+textarea{
+	width : 100%;
+	height: 6vw;
+	resize: none;
+}
+input[type=submit]:hover{
+	background: #F5F590;
+}
+#item1, #item2, #item3{
+	padding: 2vh 0 2vh 0;
+}
+/*--------------------------------------------------------------*/
+/*Adaptacion de contenido para resoluciones tablet*/
 @media all and (max-width: 900px) and (min-width:700px) {
-	.contenedor{
+.contenedor{
 		width: 90%;
 	}
-	.contenedor .header{
-			text-align: center;
-			justify-content: left;
-			align-items: center;
-				}
-
-	.contenedor .header span:first-child {
-	 		width:100px;
-		background-color: red;
-	}
-	nav {
-	  background: rgba(100,100,100, 0.5);
-		text-align: center;
-		justify-content: left;
-		align-items: center;
-	}
-	.header {
-		width: 100%;
+.header{
+		width: 90% !important;
 		height: auto;
+		text-align: center;
+		justify-content: center;s
+		align-items: center;
+}
+.header span:first-child {
+	 	width:100%;
+    margin-left: 22%;
+		padding-bottom: 20px;
+	}
+	.contenedor2 img{
+		width: 65%;
+		border-radius: 20px;
+	 	margin: 20px auto 20px auto;
+	}
+	img{
+		transition-property: width;
+		transition-duration: 0.5s;
+	}
+	img:hover{
+  	width: 80%;
 	}
 	.bloque2 {
-		width: 100%;
-		height: auto;
+		width: var(--full-space);
+		min-height:250px;
 	}
 	.contenedor2{
 		width: 90%;
 	}
-	.bloque3 {
-		width: 0;
+	div [class*="bloqueizq"]{
 		min-height: 50px;
-		display: none;
-	}
-	.bloque4{
 		width: 50%;
-		min-height: 50px;
+
 	}
-	.bloque5{
-		width: 50%;
-		min-height: 50px;
-	}
-	.bloque6 {
-		width: 0;
-		min-height: 50px;
-		display: none;
-	}
-	.bloque7{
-		width: 50%;
-		min-height: 50px;
-	}
-	.bloque8{
-		width: 50%;
-		min-height: 50px;
-	}
-	.bloque9{
+	div [class*="bloqueimd"]{
 		width: 0;
 		display: none;
 	}
-	.bloque10{
-		width: 50%;
-		min-height: 50px;
+	div [class*="bloquecen"]{
+			width: 50%;;
 	}
-	.bloque11{
-		width: 50%;
-		min-height: 50px;
+	.contenedor3{
+		width: 90%;
 	}
 }
 @media all and (max-width: 700px) and (min-width:480px) {
-	.contenedor{
+  .contenedor{
 		width: 90%;
 	}
-	header{
+	.header{
+			width: 90% !important;
+			height: auto;
 			text-align: center;
+			justify-content: center;
+			align-items: center;
 	}
-
-	.bloque3, .bloque6, .bloque9 {
-		display: none;
-		width: 0;
-	}
+	.header span:first-child {
+		 	width:100%;
+			margin-left: 22%;
+			padding-bottom: 20px;
+		}
 	.header {
-		width: 100%;
-		height: auto;
-	}
+			width: 100%;
+			height: auto;
+		}
 	.bloque2 {
-		width: 100%;
-		min-height: 200px;
-
-	}
+			width: 100%;
+			min-height: 200px;
+		}
 	.contenedor2{
+			width: 90%;
+		}
+	.contenedor2 img{
+			width: 40% !important;
+			height: auto;
+			border-radius: 20px;
+			margin: 5px auto 20px auto;
+		}
+		img{
+			transition-property: width;
+			transition-duration: 0.5s;
+		}
+	  img:hover{
+	  	width: 70% !important;
+		}
+  	.contenedor2 .imd{
+	  	float: inherit;
+		}
+    div [class*="bloqueizq"]{
+		  min-height: 50px;
+	  	width: 100%;
+  	}
+  	div [class*="bloqueimd"]{
+		  width: 0;
+		  display: none;
+  	}
+  	div [class*="bloquecen"]{
+			width: 100%;
+	  }
+	  .bloquecen1{order: 1;}
+	  .bloqueizq1{order: 2;}
+  	.bloquecen2{order: 3;}
+	  .bloqueizq2{order: 4;}
+	  .bloquecen3{order: 5;}
+	  .bloqueizq3{order: 6;}
+	/*------------------------------formulario--------------------------------*/
+	.contenedor3{
 		width: 90%;
 	}
-	.bloque3{
-		width: 100%;
-		min-height: 400px;
-		order: 2;
-	}
-
-	.bloque4 {
-		width: 100%;
-		min-height: 150px;
-	}
-	.bloque5{
-		width: 100%;
-		min-height: 150px;
-	}
-	.bloque7 {
-		width: 100%;
-		min-height: 150px;
-	}
-	.bloque8{
-		width: 100%;
-		min-height: 150px;
-	}
-	.bloque10 {
-		width: 100%;
-		min-height: 150px;
-	}
-	.bloque11{
-		width: 100%;
-		min-height: 150px;
-	}
-	#Intro{
-		display: inline !important;
+	.contenedor3 .footer{width: 100%;}
+	.contenedor3 .Formulario{
+	  width: 100%;
+	  margin-left: 20px;
 	}
 }
+
 @media all and (max-width: 480px) {
 	.contenedor{
 		width: 90%;
 		}
-		header{
-				text-align: center;
+	.header{
+		width: 90% !important;
+		height: auto;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
 		}
-
-	.bloque3, .bloque6, .bloque9 {
-		display: none;
-		width: 0;
+	.header span:first-child {
+		width:100%;
+		margin-left: 10%;
 	}
+	div [class*="bloqueizq"]{
+		min-height: 50px;
+		width: 100%;
+		}
+	div [class*="bloquecen"]{
+		width: 100%;
+			}
+	div [class*="bloqueimd"]{
+		width: 0;
+		display: none;
+		}
 	.header {
 		width: 100%;
 		height: auto;
 	}
+	.header span:first-child {
+	  width:100%;
+		margin-left: 22%;
+		padding-bottom: 20px;
+	}
 	.bloque2 {
 		width: 100%;
 		min-height: 150px;
-
 	}
 	.contenedor2{
 		width: 90%;
 	}
-	.bloque3{
-		width: 100%;
-		min-height: 400px;
-		order: 2;
+	.item{
+		width: 100px;
+	  height: auto;
+	  margin-left: 5px;
 	}
-
-	.bloque4 {
-		width: 100%;
-		min-height: 150px;
+	.contenedor3{
+		width: 90%;
 	}
-	.bloque5{
-		width: 100%;
-		min-height: 150px;
-	}
-	.bloque7 {
-		width: 100%;
-		min-height: 150px;
-	}
-	.bloque8{
-		width: 100%;
-		min-height: 150px;
-	}
-	.bloque10 {
-		width: 100%;
-		min-height: 150px;
-	}
-	.bloque11{
-		width: 100%;
-		min-height: 150px;
-	}
-	#Intro{
-		display: inline !important;
+	.contenedor3 .footer{width: 100%;}
+	.contenedor3 .Formulario{
+	width: 100%;
+	margin-left: 20px;
 	}
 }
