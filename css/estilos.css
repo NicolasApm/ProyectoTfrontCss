@@ -26,7 +26,6 @@ font-family: 'Chilanka', cursive;
 h3, nav{
 font-family: 'Cinzel', serif;
 }
-
 body{
 	background-color: var(--bg-color);
 }
@@ -83,12 +82,28 @@ body{
 	width: 100%;
 }
 /*seleccion de imagen de fondo y formato de imagen*/
-.contenedor .bloque2{
-	background-image:url("https://elcosmonauta.es/wp-content/uploads/2017/07/podar-palmeras.jpg");
+.bloque2{
+	background-image:url("https://media-cdn.tripadvisor.com/media/photo-s/06/0e/f9/08/hotel-diuwak.jpg");
  	background-repeat: no-repeat;
 	border-radius: var(--border-radius);
  	background-size: var(--full-space) var(--full-space);
 }
+/*Texto descripcion en la imagen de fondo*/
+#description{
+width: 30%;
+margin: 5vh 30vw auto 30vw;
+padding: 1vh;
+/*align-items: center;*/
+}
+#description{
+  background-color:var(--contenedor2-bg-color);
+  border-radius: var(--border-radius);
+  opacity:0.4
+}
+#description p:first-child{
+  font-size: 1.3em;
+}
+
 /*formato flex contenedor 2(Contenido de la pagina)*/
 .contenedor2 {
 	margin: 0 auto;
@@ -114,9 +129,9 @@ img{
 	transition-duration: 0.5s;
 }
 img:hover{
-		width: 95%;
+	width: 90%;
 }
-.contenedor2 div p{margin: auto 2vh auto 2vw}
+.contenedor2 div p{margin: auto 2vh auto 2vw;}
 /*Textos de titulos bloque central del contenedor 2*/
 body h3{
 	text-align: center;
@@ -207,6 +222,12 @@ input[type=submit]:hover{
 #item1, #item2, #item3{
 	padding: 2vh 0 2vh 0;
 }
+#description p:first-child{
+  font-size: 1em;
+}
+#description p:nth-child(2){
+  font-size: 0.8em;
+}
 /*--------------------------------------------------------------*/
 /*Adaptacion de contenido para resoluciones tablet*/
 @media all and (max-width: 900px) and (min-width:700px) {
@@ -226,7 +247,7 @@ input[type=submit]:hover{
 		padding-bottom: 20px;
 	}
 	.contenedor2 img{
-		width: 65%;
+		width: 60%;
 		border-radius: 20px;
 	 	margin: 20px auto 20px auto;
 	}
@@ -235,7 +256,7 @@ input[type=submit]:hover{
 		transition-duration: 0.5s;
 	}
 	img:hover{
-  	width: 80%;
+  	width: 70%;
 	}
 	.bloque2 {
 		width: var(--full-space);
@@ -298,7 +319,7 @@ input[type=submit]:hover{
 			transition-duration: 0.5s;
 		}
 	  img:hover{
-	  	width: 70% !important;
+	  	width: 50% !important;
 		}
   	.contenedor2 .imd{
 	  	float: inherit;
@@ -329,6 +350,12 @@ input[type=submit]:hover{
 	  width: 100%;
 	  margin-left: 20px;
 	}
+  #description p:first-child{
+    font-size: 0.9em;
+  }
+  #description p:nth-child(2){
+    font-size: 0.7em;
+  }
 }
 
 @media all and (max-width: 480px) {
@@ -386,4 +413,10 @@ input[type=submit]:hover{
 	width: 100%;
 	margin-left: 20px;
 	}
+  #description p:first-child{
+    font-size: 0.8em;
+  }
+  #description p:nth-child(2){
+    font-size: 0.6em;
+  }
 }
